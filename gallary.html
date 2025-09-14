@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>vikarm 32 Gallery</title>
+  <style>
+    /* ---------- Base Styles ---------- */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 5px;
+    }
+
+    /* ---------- navigation ---------- */
+    .nav{
+  top: 0;
+  position: sticky;
+    width: 100%;
+    height: 5vw;
+    background-color: rgb(2, 2, 69);
+    padding: 0.5vw;
+    box-sizing: border-box;
+    z-index: 2;
+
+}
+
+ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ol ,a{
+text-decoration: none;
+color: orangered;
+font-size: 1.3vw;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+
+}
+
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: white;
+
+    }
+
+    /* ---------- Responsive Gallery ---------- */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.09);
+    }
+
+    /* ---------- Fullscreen Lightbox ---------- */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(204, 204, 201, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .gallery img {
+        height: 200px;
+      }
+    }
+
+
+    /* footer */
+
+.footercontainer{
+    width: 100%;
+    height: 70dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: rgb(13, 13, 13);
+}
+
+.btn{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: #2d2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.btn i{
+    font-size: 1.8rem;
+    color: #7a7a7a;
+    transition: 0.6s;
+}
+
+@property --fill {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+}
+
+.outside{
+    padding: 3px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: --fill 0.8s ease-in-out;
+}
+
+.outside:hover .btn i{
+    color: crimson;
+}
+
+.footer{
+  background-color: black;
+  color: white;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+  </style>
+</head>
+<body>
+
+      <div class="nav">
+        <ul>
+            <ol><a href="index.html" target="_blank">Home</a></ol>
+            <ol><a href="about.html" target="_blank">About it</a> </ol>
+            <ol><a href="gallary.html" target="_blank">Gallery</a></ol>
+        </ul>
+    </div>
+
+
+  <h2>Vikram 3201 chip semiconductor Gallery</h2>
+  <div class="gallery">
+    <img src="Gallary/images1.jpeg" alt="Image 1">
+    <img src="Gallary/image2.jpeg" alt="Image 2">
+    <img src="Gallary/images3.jpeg" alt="Image 3">
+    <img src="Gallary/images5.jpeg" alt="Image 4">
+    <img src="Gallary/image6.jpeg" alt="Image 5">
+    <img src="Gallary/image7.jpeg" alt="Image 6">
+    <img src="Gallary/images8.jpeg" alt="Image 7">
+    <img src="Gallary/images9.jpeg" alt="Image 8">
+    <img src="Gallary/images10.jpeg" alt="Image 9">
+    <img src="Gallary/image11.jpeg" alt="Image 10">
+    <img src="Gallary/images12.jpeg" alt="Image 11">
+    <img src="Gallary/image13.jpeg" alt="Image 12">
+    <img src="Gallary/images14.jpeg" alt="Image 13">
+    <img src="Gallary/images18.jpeg" alt="Image 14">
+    <img src="Gallary/images16.jpeg" alt="Image 15">
+    <img src="Gallary/images17.jpeg" alt="Image 16">
+  </div>
+
+  <!-- Fullscreen Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <img id="lightboxImg" src="" alt="Fullscreen Image">
+  </div>
+
+
+      <div class="footercontainer">
+
+                <button class="outside">
+            <a href="index.html" target="_blank" class="btn outside">
+ <i class="fa-solid fa-house"></i>
+</a>
+        </button>
+
+        <button class="outside">
+            <a href="https://in.linkedin.com/school/rajeev-gandhi-college-raisen/" target="_blank" class="btn outside">
+  <i class="fa-brands fa-linkedin"></i>
+</a>
+        </button>
+
+        <button class="outside">
+            <a href="https://www.facebook.com/gramodayauniversitycktd/" target="_blank" class="btn outside">
+  <i class="fa-brands fa-facebook"></i>
+</a>
+        </button>
+
+        <button class="outside">
+            <a href="https://mgcgv.mponline.gov.in/Portal/Services/MGCGV/Dashboard.aspx" target="_blank" class="btn outside">
+<i class="fa-solid fa-building-columns"></i>
+</a>
+        </button>
+
+        <button class="outside">
+            <a href="https://www.instagram.com/reel/DOcmMPFgQgP/?igsh=MWdzYjh0cHNnbjhsaQ%3D%3D" target="_blank" class="btn outside">
+<i class="fa-brands fa-instagram"></i>
+</a>
+        </button>
+    
+
+
+    </div>
+   <div class="footer">
+    <h4>copyright 2025 all rights reserved</h4>
+   </div> 
+
+  <script>
+    // Get elements
+    const galleryImages = document.querySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('closeBtn');
+
+    // Open lightbox on image click
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    // Close lightbox on close button click
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    // Close lightbox on outside click
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+
+    // Close on Esc key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
